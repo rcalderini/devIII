@@ -23,7 +23,7 @@ class Usuario extends MY_Controller
         $data['table_title'] = 'Usuário';
 
         $data['user'] = array();
-        $this->loadView('template/listar_view', $data);
+        $this->loadView('admin/template/listar_view', $data);
     }
 
     public function cancelar() {
@@ -45,7 +45,7 @@ class Usuario extends MY_Controller
         }
 
 
-        $this->loadView('usuario/criar_view', $data);
+        $this->loadView('admin/usuario/criar_view', $data);
     }
 
     public function salvar() {
@@ -96,7 +96,7 @@ class Usuario extends MY_Controller
             redirect('usuario/criar');
         }
 
-        $this->loadView('usuario/editar_view', $data);
+        $this->loadView('admin/usuario/editar_view', $data);
     }
 
     public function atualizar() {

@@ -46,7 +46,7 @@
     <div class="login-panel panel panel-default plain animated bounceIn">
         <!-- Start .panel -->
         <div class="panel-body">
-            <form class="form-horizontal mt0" method="post" action="login/logar" id="login-form" role="form">
+            <form class="form-horizontal mt0" method="post" action="admin/login/logar" id="login-form" role="form">
                 <div class="form-group">
                     <div class="col-md-12">
                         <!-- col-md-12 start here -->
@@ -71,7 +71,7 @@
                             <input type="password" name="password" id="password" class="form-control" value="somepass" placeholder="Sua senha ...">
                             <span class="input-group-addon"><i class="icomoon-icon-lock s16"></i></span>
                         </div>
-                        <span class="help-block text-right"><a href="login/esquecer_senha">Esqueceu sua senha?</a></span>
+                        <span class="help-block text-right"><a href="admin/login/esquecer_senha">Esqueceu sua senha?</a></span>
                         <? $this->load->view('layout/messages'); ?>
                     </div>
 

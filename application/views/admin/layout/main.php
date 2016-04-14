@@ -3,11 +3,11 @@
 <html class="no-js lt-ie8"> <![endif]-->
 <html class="no-js">
 
-<? $this->load->view("layout/header") ?>
+<? $this->load->view("adminlayout/header") ?>
 
 <body>
 
-<? $this->load->view("layout/topo") ?>
+<? $this->load->view("adminlayout/topo") ?>
 
 <div id="wrapper">
     <!--Sidebar background-->

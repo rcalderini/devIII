@@ -19,19 +19,19 @@ class Login extends CI_Controller
 
     public function index()
     {
-        $this->load->view('login/login_view');
+        $this->load->view('admin/login/login_view');
     }
 
     function esquecer_senha()
     {
-        $this->load->view('login/esquecer_senha_view');
+        $this->load->view('admin/login/esquecer_senha_view');
     }
 
     function erro()
     {
         $data = array();
 
-        $this->load->view('login/login_view', $data);
+        $this->load->view('admin/login/login_view', $data);
     }
 
     function logout()

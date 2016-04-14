@@ -13,7 +13,7 @@
 </div>
 
 <!-- End #content -->
-<? $this->load->view("layout/footer") ?>
+<? $this->load->view("adminlayout/footer") ?>
 <!-- End #footer  -->
 
 <!-- Other plugins ( load only nessesary plugins for every page) -->

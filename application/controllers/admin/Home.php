@@ -11,7 +11,7 @@ class Home extends MY_Controller
     public function index()
     {
         $data['user'] = array();
-        $this->loadView('home/index', $data);
+        $this->loadView('admin/home/index', $data);
     }
 
     public function delete() {

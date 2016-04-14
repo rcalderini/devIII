@@ -23,13 +23,13 @@ class Menu extends MY_Controller
         $data['controller'] = 'menu';
         $data['table_title'] = 'Menu';
 
-        $this->loadView('template/listar_view', $data);
+        $this->loadView('admin/template/listar_view', $data);
     }
 
     public function criar() {
         $data['menu_pai'] = $this->menu_model->findAll();
 
-        $this->loadView('menu/criar_view', $data);
+        $this->loadView('admin/menu/criar_view', $data);
     }
 
     public function salvar() {
@@ -51,7 +51,7 @@ class Menu extends MY_Controller
 
             $data['menu'] = $this->menu_model->findOne($where);
 
-            $this->loadView('menu/editar_view', $data);
+            $this->loadView('admin/menu/editar_view', $data);
         } else {
             redirect('menu/criar');
         }

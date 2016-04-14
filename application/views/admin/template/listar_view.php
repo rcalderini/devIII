@@ -10,7 +10,7 @@
         <div id="mensagem-ajax"></div>
 
         <div class="col-lg-offset-2" style="width:35%; float:right;">
-            <? $this->load->view('layout/messages'); ?>
+            <? $this->load->view('admin/admin/layout/messages'); ?>
         </div>
 
         <!-- End  / heading-->
@@ -38,7 +38,7 @@
     </div><!-- End contentwrapper -->
 </div>
 <!-- End #content -->
-<? $this->load->view("layout/footer") ?>
+<? $this->load->view("admin/layout/footer") ?>
 <!-- End #footer  -->
 
 <!-- Other plugins ( load only nessesary plugins for every page) -->

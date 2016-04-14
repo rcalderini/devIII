@@ -20,7 +20,7 @@ class Tipo_usuario extends MY_Controller
         $data['table_title'] = 'Tipo Usuário';
 
         $data['user'] = array();
-        $this->loadView('template/listar_view', $data);
+        $this->loadView('admin/template/listar_view', $data);
     }
 
     public function cancelar()
@@ -41,7 +41,7 @@ class Tipo_usuario extends MY_Controller
             $data['tipo_usuario'] = $this->session->tipo_usuario;
         }
 
-        $this->loadView('tipo_usuario/criar_view', $data);
+        $this->loadView('admin/tipo_usuario/criar_view', $data);
     }
 
     public function salvar()
@@ -87,7 +87,7 @@ class Tipo_usuario extends MY_Controller
             redirect('tipo_usuario/criar');
         }
 
-        $this->loadView('tipo_usuario/editar_view', $data);
+        $this->loadView('admin/tipo_usuario/editar_view', $data);
     }
 
     public function atualizar()
