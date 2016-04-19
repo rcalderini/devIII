@@ -1,26 +1,34 @@
 <?php
-
 class MY_Controller extends CI_Controller
 {
-
-    protected $template = 'layout/main';
+    protected $template = '';
 
     public function __construct($controller = '')
     {
         parent::__construct();
 
         $this->load->model('user_model');
-        $this->check_auth();
-
-        $this->verifica_acesso();
     }
 
     public function loadView($view, $params = array())
     {
         $params['CONTENT'] = $view;
-        $params['MENU'] = $this->session->menu;
-
+        //$params['MENU'] = $this->session->menu;
         $this->load->view($this->template, $params);
+    }
+}
+
+
+class ADMIN_Controller extends MY_Controller
+{
+    protected $template = 'admin/layout/main';
+
+    public function __construct($controller = '')
+    {
+        parent::__construct();
+
+        $this->check_auth();
+        $this->verifica_acesso();
     }
 
     public function setUser($user)
@@ -71,5 +79,15 @@ class MY_Controller extends CI_Controller
         if (!$acl->verifyAccess($controller, $action)) {
             redirect('error/error_403');
         }
+    }
+}
+
+class SITE_Controller extends MY_Controller
+{
+    protected $template = 'site/layout/main';
+
+    public function __construct($controller = '')
+    {
+        parent::__construct();
     }
 }
