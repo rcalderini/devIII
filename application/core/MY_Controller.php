@@ -13,7 +13,7 @@ class MY_Controller extends CI_Controller
     public function loadView($view, $params = array())
     {
         $params['CONTENT'] = $view;
-        //$params['MENU'] = $this->session->menu;
+        $params['MENU'] = $this->session->menu;
         $this->load->view($this->template, $params);
     }
 }

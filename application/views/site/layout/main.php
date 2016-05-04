@@ -9,12 +9,14 @@
 
 <? $this->load->view("site/layout/topo") ?>
 
-<div id="wrapper">
-    <!--Sidebar background-->
-    <? //$this->load->view('layout/sidebar') ?>
-    <!--Sidebar content-->
-    <!--Body content-->
-    <? $this->load->view($CONTENT) ?>
-</div>
+    <div id="wrapper">
+        <!--Sidebar background-->
+        <? //$this->load->view('layout/sidebar') ?>
+        <!--Sidebar content-->
+        <!--Body content-->
+        <? $this->load->view($CONTENT) ?>
+
+        <? $this->load->view("site/layout/footer") ?>
+    </div>
 </body>
 </html>

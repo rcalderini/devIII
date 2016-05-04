@@ -10,14 +10,7 @@ class Home extends SITE_Controller
 
     public function index()
     {
-        //echo this->template;
-        //edie;
         $data['user'] = array();
-        //$this->load->view('site/home/index');
         $this->loadView('site/home/index',$data);
-    }
-
-    public function delete() {
-
     }
 }

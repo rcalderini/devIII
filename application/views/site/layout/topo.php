@@ -37,7 +37,7 @@
                 <div class="top-header-center-alert-right">
                     <div class="vticker">
                         <ul>
-                            <li>Applies to orders of $50 or more. <label>Returns are always free.</label></li>
+                            <li>Toda loja com frete grátis. <label>Aproveite as ofertas!</label></li>
                         </ul>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             <div class="top-header-right">
                 <ul>
                     <li><a href="login.html">Login</a><span> </span></li>
-                    <li><a href="register.html">Join</a></li>
+                    <li><a href="/cliente/cadastrar">Registre-se</a></li>
                 </ul>
             </div>
             <div class="clear"> </div>
@@ -56,7 +56,7 @@
     <div class="mid-header">
         <div class="wrap">
             <div class="mid-grid-left">
-                <a class="logo" href="index.html"><span> </span></a>
+                <a class="logo" href="/"><span> </span></a>
             </div>
             <div class="mid-grid-right">
                 <form>
