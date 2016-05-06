@@ -1,3 +1,41 @@
 /* -----------------------------------------
-   Custom.css - put your own changes here 
+   Custom.css - put your own changes here
 ----------------------------------------- */
+.logo span {
+    width: 220px;
+    height: 60px;
+    display: inline-block;
+    background: url(../site/images/virtualShop_logo.png) no-repeat -10px;
+}
+
+.mid-grid-right input[type="text"] {
+    border: 1px solid #08080B;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    padding: 2.5em 15px 1em 0;
+    color: #A5A5A5;
+    width: 100%;
+    -moz-transition: padding-right 0.5s ease-out;
+    -webkit-transition: padding-right 0.5s ease-out;
+    transition: padding-right 0.5s ease-out;
+}
+
+.mid-grid-right input[type="text"]:focus {
+    padding-right: 30px;
+    -moz-transition: padding-right 0.5s ease-out;
+    -webkit-transition: padding-right 0.5s ease-out;
+    transition: padding-right 0.5s ease-out;
+}
+
+.top-header-center{
+    width: 70%;
+    padding: 0.25em 0 0 0;
+}
+
+.news-letter {
+    font-weight: normal;
+    text-transform: none;
+}

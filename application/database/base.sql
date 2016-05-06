@@ -355,6 +355,17 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `fk_usuario_tipo_usuario1` FOREIGN KEY (`id_tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- Copiando estrutura para tabela rdfstands.cliente
+DROP TABLE IF EXISTS `cliente`;
+CREATE TABLE IF NOT EXISTS `cliente` (
+  `id_cliente` INT(11) NOT NULL AUTO_INCREMENT ,
+  `nome` VARCHAR(120) NOT NULL ,
+  `email` VARCHAR(160) NOT NULL ,
+  `senha` TEXT NOT NULL ,
+  `data_atualizacao` DATETIME NOT NULL ,
+  `ativo` CHAR(1) NOT NULL DEFAULT 'S' ,
+  PRIMARY KEY (`id_cliente`)
+) ENGINE = InnoDB;
 -- Copiando dados para a tabela rdfstands.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;

@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Home extends SITE_Controller
 {
 
     public function __construct()
@@ -11,10 +11,6 @@ class Home extends CI_Controller
     public function index()
     {
         $data['user'] = array();
-        $this->load->view('site/home/index');
-    }
-
-    public function delete() {
-
+        $this->loadView('site/home/index',$data);
     }
 }
