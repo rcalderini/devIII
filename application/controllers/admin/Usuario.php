@@ -31,7 +31,7 @@ class Usuario extends MY_Controller
             $this->session->unset_userdata('usuario');
         }
 
-        redirect('usuario');
+        redirect('admin/usuario');
     }
 
     public function criar() {
@@ -62,7 +62,7 @@ class Usuario extends MY_Controller
 
             $this->session->usuario = (object) $data;
 
-            redirect('usuario/criar/', 'location');
+            redirect('admin/usuario/criar/', 'location');
 
         }else{
             $data['nome'] = $this->input->post('nome');
@@ -93,7 +93,7 @@ class Usuario extends MY_Controller
             $data['usuario'] = $this->usuario_model->findOne($where);
 
         } else {
-            redirect('usuario/criar');
+            redirect('admin/usuario/criar');
         }
 
         $this->loadView('admin/usuario/editar_view', $data);
@@ -120,7 +120,7 @@ class Usuario extends MY_Controller
 
             $this->session->usuario = (object) $data;
 
-            redirect('usuario/editar/'.$this->input->post('id_usuario'), 'location');
+            redirect('admin/usuario/editar/'.$this->input->post('id_usuario'), 'location');
 
         }else{
             $where = array();
@@ -136,7 +136,7 @@ class Usuario extends MY_Controller
 
             $this->session->set_flashdata('ok', 'Usuário atualizado com sucesso!');
 
-            redirect('usuario', 'location');
+            redirect('admin/usuario', 'location');
         }
     }
 

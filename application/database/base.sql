@@ -186,6 +186,14 @@ INSERT INTO `usuario` (`id_usuario`, `id_tipo_usuario`, `nome`, `email`, `senha`
 	(1, 1, 'Roger William Calderini', 'roger_calderini@hotmail.com', 'tonZdWyW4mY9qS7xIKd3VvwWH5DfgZkr/UJAi4nbCNkCTmVgISWFQHiXsMIWyf25qo6ty7IREDWK6ev40FpITg==', '2016-04-02 13:04:56', 'S'),
 	(2, 1, 'Rafael', 'rafael@hotmail.com', 'tonZdWyW4mY9qS7xIKd3VvwWH5DfgZkr/UJAi4nbCNkCTmVgISWFQHiXsMIWyf25qo6ty7IREDWK6ev40FpITg==', '2016-04-02 13:04:56', 'S');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
+INSERT INTO `menu` (`id_menu`, `menu`, `id_menu_pai`, `url`, `descricao`, `icone`) VALUES (1, 'Cadastro', NULL, '#', 'Cadastros em geral', ' icomoon-icon-file');
+INSERT INTO `menu` (`id_menu`, `menu`, `id_menu_pai`, `url`, `descricao`, `icone`) VALUES (5, 'Usuários', 1, 'usuario', 'Cadastros de Usuários', ' icomoon-icon-file');
+INSERT INTO `menu` (`id_menu`, `menu`, `id_menu_pai`, `url`, `descricao`, `icone`) VALUES (6, 'Tipo Usuário', 1, 'tipo_usuario', 'Cadastro de Tipo Usuários', ' icomoon-icon-file');
+INSERT INTO `menu` (`id_menu`, `menu`, `id_menu_pai`, `url`, `descricao`, `icone`) VALUES (12, 'Menu', 1, 'menu', 'Gerenciar Menus', ' icomoon-icon-file');
+
+INSERT INTO menu_tipo_usuario (id_menu,id_tipo_usuario) select id_menu,id_tipo_usuario from menu, tipo_usuario;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

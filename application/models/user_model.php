@@ -135,7 +135,7 @@ class User_model extends My_Model
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('token_back');
 
-        redirect('login', 'location');
+        redirect('admin/login', 'location');
 
     }
 

@@ -37,7 +37,7 @@ class Login extends CI_Controller
     function logout()
     {
         $this->session->sess_destroy();
-        redirect('login', 'location');
+        redirect('admin/login', 'location');
     }
 
     function logar()
@@ -45,10 +45,10 @@ class Login extends CI_Controller
         $retorno = $this->user_model->login($this->input->post('username'), $this->input->post('password'));
 
         if ($retorno) {
-            redirect('home');
+            redirect('admin/home');
         } else {
             $this->session->set_flashdata('erro', 'Usuário ou senha incorreto!');
-            redirect('login');
+            redirect('admin/login');
         }
     }
 
@@ -84,7 +84,7 @@ class Login extends CI_Controller
             $this->session->set_flashdata('erro', 'Usuário não cadastrado!');
         }
 
-        redirect('login/esquecer_senha');
+        redirect('admin/login/esquecer_senha');
 
     }
 

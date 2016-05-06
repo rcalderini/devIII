@@ -29,7 +29,7 @@ class Tipo_usuario extends MY_Controller
             $this->session->unset_userdata('tipo_usuario');
         }
 
-        redirect('tipo_usuario');
+        redirect('admin/tipo_usuario');
     }
 
     public function criar()
@@ -67,7 +67,7 @@ class Tipo_usuario extends MY_Controller
                 redirect('tipo_usuario');
             } else {
                 $this->session->set_flashdata('erro', 'Problema ao cadastrar Tipo de Usuário!Entrar em contato com setor de Informática');
-                redirect('tipo_usuario/criar/', 'location');
+                redirect('admin/tipo_usuario/criar/', 'location');
             }
         }
 
@@ -84,7 +84,7 @@ class Tipo_usuario extends MY_Controller
             $data['tipo_usuario'] = $this->tipo_usuario_model->findOne($where);
 
         } else {
-            redirect('tipo_usuario/criar');
+            redirect('admin/tipo_usuario/criar');
         }
 
         $this->loadView('admin/tipo_usuario/editar_view', $data);
@@ -119,7 +119,7 @@ class Tipo_usuario extends MY_Controller
 
             $this->session->set_flashdata('ok', 'Tipo de Usuário atualizado com sucesso!');
 
-            redirect('tipo_usuario', 'location');
+            redirect('admin/tipo_usuario', 'location');
         }
 
     }

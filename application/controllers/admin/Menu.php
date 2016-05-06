@@ -41,7 +41,7 @@ class Menu extends MY_Controller
         $sucesso = $this->menu_model->insertItem((object) $data);
 
         if($sucesso) {
-            redirect('menu');
+            redirect('admin/menu');
         }
     }
 
@@ -53,7 +53,7 @@ class Menu extends MY_Controller
 
             $this->loadView('admin/menu/editar_view', $data);
         } else {
-            redirect('menu/criar');
+            redirect('admin/menu/criar');
         }
     }
 
@@ -69,7 +69,7 @@ class Menu extends MY_Controller
 //var_dump( $where);die;
         $this->menu_model->atualizaItem((object) $data, $where);
 
-        redirect('menu', 'location');
+        redirect('admin/menu', 'location');
     }
 
 }

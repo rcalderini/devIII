@@ -56,7 +56,7 @@ class ADMIN_Controller extends MY_Controller
             }
         }
 
-        redirect('login');
+        redirect('admin/login');
     }
 
     /**

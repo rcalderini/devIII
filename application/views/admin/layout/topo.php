@@ -2,7 +2,9 @@
 <div id="header">
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="admin/home"><img src="assets/img/logo_p.png" width="165" height="60"></a>
+            <a class="navbar-brand" href="admin/home">
+                Supr.<span class="slogan">admin</span>
+            </a>
         </div>
         <div id="navbar-no-collapse" class="navbar-no-collapse">
             <ul class="nav navbar-right usernav">
