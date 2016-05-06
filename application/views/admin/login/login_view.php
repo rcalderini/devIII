@@ -72,7 +72,7 @@
                             <span class="input-group-addon"><i class="icomoon-icon-lock s16"></i></span>
                         </div>
                         <span class="help-block text-right"><a href="admin/login/esquecer_senha">Esqueceu sua senha?</a></span>
-                        <? $this->load->view('layout/messages'); ?>
+                        <? $this->load->view('admin/layout/messages'); ?>
                     </div>
 
                 </div>

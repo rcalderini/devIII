@@ -30,7 +30,7 @@ class User_model extends My_Model
             $this->session->token_back = sha1($user->id_usuario . $user->email);
             $this->session->menu = $this->setMenu($user->id_tipo_usuario);
 
-            $this->setAcl($user->id_usuario);
+            //$this->setAcl($user->id_usuario);
 
             return true;
         }

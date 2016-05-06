@@ -28,7 +28,7 @@ class ADMIN_Controller extends MY_Controller
         parent::__construct();
 
         $this->check_auth();
-        $this->verifica_acesso();
+        //$this->verifica_acesso();
     }
 
     public function setUser($user)
