@@ -28,7 +28,7 @@ class ADMIN_Controller extends MY_Controller
         parent::__construct();
 
         $this->check_auth();
-        //$this->verifica_acesso();
+        $this->verifica_acesso();
     }
 
     public function setUser($user)
@@ -56,7 +56,7 @@ class ADMIN_Controller extends MY_Controller
             }
         }
 
-        redirect('admin/login');
+        redirect('login');
     }
 
     /**
@@ -89,5 +89,34 @@ class SITE_Controller extends MY_Controller
     public function __construct($controller = '')
     {
         parent::__construct();
+    }
+
+    public function setCliente($cliente)
+    {
+        $this->session->cliente = $cliente;
+    }
+
+    public function getCliente()
+    {
+        return $this->session->cliente;
+    }
+
+    public function getClienteId()
+    {
+        return $this->session->cliente->id_cliente;
+    }
+
+    protected function check_auth()
+    {
+        if ($this->session) {
+            $cliente = $this->getCliente();
+            $token = sha1($cliente->id_cliente . $cliente->email);
+
+            if ($token === $this->session->token_back_site) {
+                return true;
+            }
+        }
+
+        redirect('home');
     }
 }
