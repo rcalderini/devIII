@@ -3,7 +3,7 @@
         <div class="wrap">
             <h1>Cadastro</h1>
             <div class="register-grids">
-                <form action="/cliente/salvar" method="post">
+                <form action="/cliente/salvar" method="post" id="formCadastrar">
                     <div class="register-top-grid">
                         <h3>Informações Pessoais</h3>
                         <div>
@@ -13,14 +13,6 @@
                         <div>
                             <span>Sobrenome<label>*</label></span>
                             <input type="text" id="sobrenome" name="sobrenome" maxlength="120">
-                        </div>
-                        <div>
-                            <span>Endereço<label>*</label></span>
-                            <input type="text" id="endereco" name="endereco" maxlength="120">
-                        </div>
-                        <div>
-                            <span>Número<label>*</label></span>
-                            <input type="text" id="numero" name="numero" maxlength="4" size="5">
                         </div>
                         <div class="clearLineForm">&nbsp;</div>
                     </div>
@@ -46,9 +38,46 @@
                         <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Eu aceito receber ofertas e novidades da Virtual Shop por e-mail</label>
                     </a>
                     <div class="clear"></div>
-                    <input type="submit" value="Cadastrar" />
+                    <input type="submit" value="Cadastrar" id="btnCadastrar" />
                 </form>
             </div>
         </div>
     </div>
 </div>
+<script type='text/javascript'>
+    $("#btnCadastrar").on("click",function(e){
+        e.preventDefault();
+        if($("#nome").val() == ""){
+            alert('O campo Nome deve ser informado!');
+            $("#nome").focus();
+            return false;
+        }
+        if($("#sobrenome").val() == ""){
+            alert('O campo Sobrenome deve ser informado!');
+            $("#sobrenome").focus();
+            return false;
+        }
+        if($("#email").val() == ""){
+            alert('O campo email deve ser informado!');
+            $("#email").focus();
+            return false;
+        }
+        if($("#senha").val() == ""){
+            alert('O campo senha deve ser informado!');
+            $("#senha").focus();
+            return false;
+        }
+        if($("#confirmacaoSenha").val() == ""){
+            alert('O campo Confirmação de Senha deve ser informado!');
+            $("#confirmacaoSenha").focus();
+            return false;
+        }
+        if($("#confirmacaoSenha").val() != $("#senha").val()){
+            alert('Repita corretamente a senha informada !');
+            $("#confirmacaoSenha").focus();
+            return false;
+        }
+
+        $("#formCadastrar").submit();
+    });
+</script>

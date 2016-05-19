@@ -70,7 +70,8 @@
     border:1px solid #DDD;
 }
 
-.register-top-grid input[type="password"], .register-bottom-grid input[type="password"] {
+.register-top-grid input[type="password"], .register-bottom-grid input[type="password"],
+.login-right input[type="password"] {
     border:1px solid #DDD;
     outline-color: #E45D5D;
     width: 96%;
@@ -93,7 +94,18 @@
     float: left;
  }
 
- .logout{
+.logout{
     text-align: right;
-    cursor: pointer;
- }
+}
+
+.forgot{
+    font-weight: normal;
+    text-transform: none;
+    color:#008dcd;
+    font-style: italic;
+}
+
+.forgot:hover{
+    text-decoration:underline;
+    color:#008dcd;
+}

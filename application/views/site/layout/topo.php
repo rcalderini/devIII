@@ -47,11 +47,11 @@
                 <? if ($this->session->cliente != null) { ?>
                     <div class="msgClienteLogado">
                         <p>Olá, <?echo $this->session->cliente->nome ?>. <a href="cliente/painel">Clique aqui para acessar seu painel</a></p>
-                        <p class="logout">Sair</p>
+                        <p class="logout"><a href="cliente/logout">Sair</a></p>
                     </div>
                 <? }else{ ?>
                         <ul>
-                            <li><a href="login.html">Login</a><span> </span></li>
+                            <li><a href="/cliente/login">Login</a><span> </span></li>
                             <li><a href="/cliente/cadastrar">Registre-se</a></li>
                         </ul><?
                     }

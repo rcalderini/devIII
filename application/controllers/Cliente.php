@@ -44,4 +44,27 @@ class Cliente extends SITE_Controller
             }
         }
     }
+
+    public function logout(){
+        $this->autenticacao_model->logout();
+    }
+
+    public function login(){
+        if ($this->input->post()) {
+            $data['email'] = $this->input->post('email');
+            $data['senha'] = $this->input->post('senha');
+
+            $sucesso = $this->autenticacao_model->login($data['email'],$data['senha']);
+
+            if($sucesso){
+                $this->session->set_flashdata('error', 'Usuário ou senha inválidos');
+                redirect('home');
+            }else{
+                $this->session->set_flashdata('error', 'Usuário ou senha inválidos');
+                $this->loadView('site/cliente/login');
+            }
+        } else {
+            $this->loadView('site/cliente/login');
+        }
+    }
 }
