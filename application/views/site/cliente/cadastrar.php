@@ -47,37 +47,58 @@
 <script type='text/javascript'>
     $("#btnCadastrar").on("click",function(e){
         e.preventDefault();
+        var erros = [];
+        var campoFocus = null;
         if($("#nome").val() == ""){
-            alert('O campo Nome deve ser informado!');
-            $("#nome").focus();
-            return false;
+            erros.push("O campo Nome deve ser informado.");
+            campoFocus = $("#nome");
         }
         if($("#sobrenome").val() == ""){
-            alert('O campo Sobrenome deve ser informado!');
-            $("#sobrenome").focus();
-            return false;
+            erros.push("O campo Sobrenome deve ser informado.");
+            if(campoFocus == null){
+                campoFocus = $("#sobrenome");
+            }
         }
         if($("#email").val() == ""){
-            alert('O campo email deve ser informado!');
-            $("#email").focus();
-            return false;
+            erros.push("O campo Email deve ser informado.");
+            if(campoFocus == null){
+                campoFocus = $("#email");
+            }
         }
         if($("#senha").val() == ""){
-            alert('O campo senha deve ser informado!');
-            $("#senha").focus();
-            return false;
+            erros.push("O campo Senha deve ser informado.");
+            if(campoFocus == null){
+                campoFocus = $("#senha");
+            }
         }
         if($("#confirmacaoSenha").val() == ""){
-            alert('O campo Confirmação de Senha deve ser informado!');
-            $("#confirmacaoSenha").focus();
-            return false;
+            erros.push("O campo Confirmação de Senha deve ser informado.");
+            if(campoFocus == null){
+                campoFocus = $("#confirmacaoSenha");
+            }
         }
-        if($("#confirmacaoSenha").val() != $("#senha").val()){
-            alert('Repita corretamente a senha informada !');
-            $("#confirmacaoSenha").focus();
+        if(($("#senha").val() != "" && $("#confirmacaoSenha").val() != "") && $("#confirmacaoSenha").val() != $("#senha").val()){
+            erros.push("Repita corretamente a senha informada.");
+            if(campoFocus == null){
+                campoFocus = $("#confirmacaoSenha");
+            }
+        }
+
+        if(erros.length > 0){
+            montaMsgValidacao(erros, campoFocus);
             return false;
         }
 
         $("#formCadastrar").submit();
     });
+
+    function montaMsgValidacao(erros, campo){
+        var sHTML = "<ul class='msgValidacaoCampos'>";
+        for (var i = 0; i < erros.length; i++) {
+            sHTML += "<li> "+erros[i] +"</li>";
+        };
+        sHTML += "</ul>"
+        msg(sHTML, "Erro!", "error");
+        campo.focus();
+    }
 </script>

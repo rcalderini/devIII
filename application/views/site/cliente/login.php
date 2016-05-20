@@ -30,17 +30,37 @@
 <script type='text/javascript'>
     $("#btnLogin").on("click",function(e){
         e.preventDefault();
+        var erros = [];
+        var campoFocus = null;
+
         if($("#email").val() == ""){
-            alert('Informe o email!');
-            $("#email").focus();
-            return false;
+            erros.push("O campo Email deve ser informado.");
+            if(campoFocus == null){
+                campoFocus = $("#email");
+            }
         }
         if($("#senha").val() == ""){
-            alert('Informe a senha!');
-            $("#senha").focus();
+            erros.push("O campo Senha deve ser informado.");
+            if(campoFocus == null){
+                campoFocus = $("#senha");
+            }
+        }
+
+        if(erros.length > 0){
+            montaMsgValidacao(erros, campoFocus);
             return false;
         }
 
         $("#formLogin").submit();
     });
+
+    function montaMsgValidacao(erros, campo){
+        var sHTML = "<ul class='msgValidacaoCampos'>";
+        for (var i = 0; i < erros.length; i++) {
+            sHTML += "<li> "+erros[i] +"</li>";
+        };
+        sHTML += "</ul>"
+        msg(sHTML, "Erro!", "error");
+        campo.focus();
+    }
 </script>

@@ -26,7 +26,7 @@ class Cliente extends SITE_Controller
         $data['email'] = $this->input->post('email');
         $data['ativo'] = 'S';
         if ($this->cliente_model->findOne($data)){
-            $this->session->set_flashdata('erro', 'Cliente já cadastrado!');
+            $this->session->set_flashdata('erro', 'Email já cadastrado em nossa loja!');
             $data['nome'] = $this->input->post('nome');
 
             redirect('cliente/cadastrar/', 'location');
@@ -57,10 +57,9 @@ class Cliente extends SITE_Controller
             $sucesso = $this->autenticacao_model->login($data['email'],$data['senha']);
 
             if($sucesso){
-                $this->session->set_flashdata('error', 'Usuário ou senha inválidos');
                 redirect('home');
             }else{
-                $this->session->set_flashdata('error', 'Usuário ou senha inválidos');
+                $this->session->set_flashdata('erro', 'Usuário ou senha inválidos.');
                 $this->loadView('site/cliente/login');
             }
         } else {

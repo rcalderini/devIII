@@ -94,8 +94,20 @@
     float: left;
  }
 
-.logout{
+.acessoRapidoMenuCliente{
     text-align: right;
+}
+
+.itemAcessoRapidoMenu{
+    padding: 0px 5px 0px 0px;
+}
+
+.itemAcessoRapidoMenu:after{
+    content: '|';
+}
+
+.itemAcessoRapidoMenu:last-child:after{
+    content: '';
 }
 
 .forgot{
@@ -108,4 +120,9 @@
 .forgot:hover{
     text-decoration:underline;
     color:#008dcd;
+}
+
+.msgValidacaoCampos{
+    list-style: square;
+    padding-left: 10px;
 }

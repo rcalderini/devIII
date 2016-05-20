@@ -9,7 +9,7 @@
     <!----//webfonts---->
 
     <!----start-alert-scroller---->
-    
+
     <script src="<? echo base_url("assets/site/js/jquery.min.js"); ?>"></script>
     <?
     //<script type="text/javascript" src="< echo base_url("assets/site/js/jquery.easy-ticker.js"); >"></script>
@@ -79,6 +79,12 @@
     </script>
     <!---//move-top-top---->
 
+    <!--- Pnotify -->
+    <script type="text/javascript" src="<? echo base_url("assets/site/plugins/pnotify/js/pnotify.custom.min.js"); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<? echo base_url("assets/site/plugins/pnotify/css/pnotify.custom.min.css"); ?>">
+    <!--- //Pnotify -->
+
+<script type="text/javascript" src="<? echo base_url("assets/site/js/utility.js"); ?>"></script>
     <link rel="stylesheet" type="text/css" href="<? echo base_url("assets/css/custom.css"); ?>">
     <link rel="icon" href="<? echo base_url("assets/img/favicon.ico"); ?>" type="image/png">
 </head>

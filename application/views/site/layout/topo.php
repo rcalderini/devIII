@@ -46,8 +46,15 @@
             <div class="top-header-right">
                 <? if ($this->session->cliente != null) { ?>
                     <div class="msgClienteLogado">
-                        <p>Olá, <?echo $this->session->cliente->nome ?>. <a href="cliente/painel">Clique aqui para acessar seu painel</a></p>
-                        <p class="logout"><a href="cliente/logout">Sair</a></p>
+                        <p>Olá, <?echo $this->session->cliente->nome ?>.</p>
+                        <p class="acessoRapidoMenuCliente">
+                            <span class="itemAcessoRapidoMenu">
+                                <a href="/cliente">Painel do Cliente</a>
+                            </span>
+                            <span class="itemAcessoRapidoMenu">
+                                <a href="cliente/logout">Sair</a>
+                            </span>
+                        </p>
                     </div>
                 <? }else{ ?>
                         <ul>
@@ -480,3 +487,4 @@
         </div>
     </div>
 </div>
+<? $this->load->view('site/layout/messages'); ?>

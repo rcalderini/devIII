@@ -21,15 +21,15 @@ class Autenticacao_Model extends My_Model
         $data['email ='] = $email;
 
         $cliente = $this->findOne($data);
-        //echo $this->encrypt->decode($cliente->senha);
-        //die;
-        if ($password === $this->encrypt->decode($cliente->senha)) {
-            $this->session->cliente = $cliente;
-            $this->session->token_back_site = sha1($cliente->id_cliente . $cliente->email);
 
-            return true;
+        if($cliente != null){
+            if ($password === $this->encrypt->decode($cliente->senha)) {
+                $this->session->cliente = $cliente;
+                $this->session->token_back_site = sha1($cliente->id_cliente . $cliente->email);
+
+                return true;
+            }
         }
-
         return false;
     }
 
