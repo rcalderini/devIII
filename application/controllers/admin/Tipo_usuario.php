@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tipo_usuario extends MY_Controller
+class Tipo_usuario extends ADMIN_Controller
 {
 
     public function __construct()

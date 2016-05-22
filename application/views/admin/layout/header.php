@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <base href="<?= base_url() ?>"/>
-    <title>RDF Stands</title>
+    <title>DESENV 3 - Loja Virtual</title>
 
     <!-- Mobile specific metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

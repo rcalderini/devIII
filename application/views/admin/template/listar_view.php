@@ -10,7 +10,7 @@
         <div id="mensagem-ajax"></div>
 
         <div class="col-lg-offset-2" style="width:35%; float:right;">
-            <? $this->load->view('admin/admin/layout/messages'); ?>
+            <? $this->load->view('admin/layout/messages'); ?>
         </div>
 
         <!-- End  / heading-->
@@ -23,7 +23,7 @@
                     <div class="panel-heading">
                         <p></p>
                         &nbsp;
-                        <button type="button" onclick="window.location.href='<?=$controller?>/criar'" class="btn btn-info mr5 mb10">
+                        <button type="button" onclick="window.location.href='admin/<?=$controller?>/criar'" class="btn btn-info mr5 mb10">
                             <i class="minia-icon-plus-2 mr5"></i> Novo</button>
                     </div>
                     <div class="panel-body">

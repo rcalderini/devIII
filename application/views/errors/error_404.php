@@ -18,7 +18,7 @@
             <h2 class="text-center mt30 mb30">Pagina não encontrada.</h2>
             <div class="text-center">
                 <a href="javascript: history.go(-1)" class="btn btn-default mr10"><span class="icomoon-icon-arrow-left-10 s16"></span>Votar</a>
-                <a href="home" class="btn btn-default"><span class="icomoon-icon-screen s16"></span>RDF</a>
+                <a href="home" class="btn btn-default"><span class="icomoon-icon-screen s16"></span>DESENV 3 - Loja Virtual</a>
             </div>
         </div>
     </div>

@@ -21,10 +21,7 @@
                                 <?// var_dump($this->user_model->verifica_acesso_acao('usuario', 'criar')); die('---------');?>
 
                                 <li><a href="admin/usuario/editar/<?=$this->session->user->id_usuario?>"><i class="s16 icomoon-icon-user-plus"></i>Editar Usuário</a></li>
-                                <? if ($this->user_model->verifica_acesso_acao('usuario', 'criar')) {?>
-                                    <li><a href="admin/usuario/criar"><i class="s16 icomoon-icon-plus"></i>Add Usuário</a></li>
-                                <?}?>
-
+                                <li><a href="admin/usuario/criar"><i class="s16 icomoon-icon-plus"></i>Add Usuário</a></li>
                             </ul>
                         </li>
                     </ul>

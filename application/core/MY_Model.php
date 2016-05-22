@@ -119,11 +119,6 @@ class My_Model extends CI_Model
      */
     private function insert($object)
     {
-        if ($this->_exclusaoLogica) {
-            $object->ativo = 'S';
-            $object->data_atualizacao = date('Y-m-d H:i:s');
-        }
-
         $this->db->set($object);
         $this->db->insert($this->_table);
 
@@ -150,11 +145,6 @@ class My_Model extends CI_Model
      */
     protected function delete(array $id)
     {
-        if ($this->_exclusaoLogica) {
-            $object = (object)array('ativo' => 'N');
-            return $this->update($object, $id);
-        }
-
         return $this->db->delete($this->_table, $id);
     }
 
@@ -186,10 +176,6 @@ class My_Model extends CI_Model
      */
     public function update($object, array $id)
     {
-        if ($this->_exclusaoLogica) {
-            $object->data_atualizacao = date('Y-m-d H:i:s');
-        }
-
         $this->db->where($id);
         return $this->db->update($this->_table, $object);
     }
@@ -203,10 +189,6 @@ class My_Model extends CI_Model
      */
     protected function find(array $where = array(), $limit = null)
     {
-        if ($this->_exclusaoLogica) {
-            $where['ativo'] = 'S';
-        }
-
         return $this->db->get_where($this->_table, $where, $limit);
     }
 

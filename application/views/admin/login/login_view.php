@@ -3,7 +3,7 @@
 <head>
     <base href="<?= base_url() ?>"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>RDF Stands</title>
+    <title>DESENV 3 - Loja Virtual</title>
 
     <!-- Import google fonts - Heading first/ text second -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
@@ -92,7 +92,7 @@
 <!-- End login container -->
 <div class="container">
     <div class="footer">
-        <p class="text-center">&copy;2016 Copyright RDF Stands. All right reserved !!!</p>
+        <p class="text-center">&copy;2016 Copyright DESENV 3 - Loja Virtual. All right reserved !!!</p>
     </div>
 </div>
 <!-- Javascripts -->
