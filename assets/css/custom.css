@@ -29,13 +29,100 @@
     -webkit-transition: padding-right 0.5s ease-out;
     transition: padding-right 0.5s ease-out;
 }
-
+.top-header-left{
+    width: 5%;
+}
 .top-header-center{
-    width: 70%;
+    width: 60%;
     padding: 0.25em 0 0 0;
 }
 
 .news-letter {
     font-weight: normal;
     text-transform: none;
+}
+
+.msgClienteLogado{
+    color:#FFFFFF;
+    font-size:14px;
+}
+
+.msgClienteLogado a{
+    color:#F06B6B;
+}
+
+.register-top-grid input[type="password"], .register-bottom-grid input[type="password"] {
+    border: 1px solid #EEE;
+    outline-color: #E45D5D;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clearLineForm {
+    clear: both;
+    float: right !important;
+    margin: 0px !important;
+}
+
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"]{
+    border:1px solid #DDD;
+}
+
+.register-top-grid input[type="password"], .register-bottom-grid input[type="password"],
+.login-right input[type="password"] {
+    border:1px solid #DDD;
+    outline-color: #E45D5D;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.containerMenuPainelCliente{
+    float: left;
+    padding: 0px 35px 0px 0px;
+}
+
+.menuPainelCliente{
+    text-decoration: none;
+    color:#222222;
+}
+
+.contentPainelCliente{
+    float: left;
+ }
+
+.acessoRapidoMenuCliente{
+    text-align: right;
+}
+
+.itemAcessoRapidoMenu{
+    padding: 0px 5px 0px 0px;
+}
+
+.itemAcessoRapidoMenu:after{
+    content: '|';
+}
+
+.itemAcessoRapidoMenu:last-child:after{
+    content: '';
+}
+
+.forgot{
+    font-weight: normal;
+    text-transform: none;
+    color:#008dcd;
+    font-style: italic;
+}
+
+.forgot:hover{
+    text-decoration:underline;
+    color:#008dcd;
+}
+
+.msgValidacaoCampos{
+    list-style: square;
+    padding-left: 10px;
 }

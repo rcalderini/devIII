@@ -9,21 +9,24 @@
     <!----//webfonts---->
 
     <!----start-alert-scroller---->
+
     <script src="<? echo base_url("assets/site/js/jquery.min.js"); ?>"></script>
-    <script type="text/javascript" src="assets/site/js/jquery.easy-ticker.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#demo').hide();
-            $('.vticker').easyTicker();
-        });
-    </script>
+    <?
+    //<script type="text/javascript" src="< echo base_url("assets/site/js/jquery.easy-ticker.js"); >"></script>
+    //<script type="text/javascript">
+    //    $(document).ready(function(){
+    //        $('#demo').hide();
+    //        $('.vticker').easyTicker();
+    //    });
+    //</script>
+    ?>
     <!----start-alert-scroller---->
 
     <!-- start menu -->
     <link href="<? echo base_url("assets/site/css/megamenu.css"); ?>" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="assets/site/js/megamenu.js"></script>
+    <script type="text/javascript" src="<? echo base_url("assets/site/js/megamenu.js"); ?>"></script>
     <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-    <script src="assets/site/js/menu_jquery.js"></script>
+    <script src="<? echo base_url("assets/site/js/menu_jquery.js"); ?>"></script>
     <!-- //End menu -->
 
     <!---slider---->
@@ -76,6 +79,12 @@
     </script>
     <!---//move-top-top---->
 
+    <!--- Pnotify -->
+    <script type="text/javascript" src="<? echo base_url("assets/site/plugins/pnotify/js/pnotify.custom.min.js"); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<? echo base_url("assets/site/plugins/pnotify/css/pnotify.custom.min.css"); ?>">
+    <!--- //Pnotify -->
+
+<script type="text/javascript" src="<? echo base_url("assets/site/js/utility.js"); ?>"></script>
     <link rel="stylesheet" type="text/css" href="<? echo base_url("assets/css/custom.css"); ?>">
     <link rel="icon" href="<? echo base_url("assets/img/favicon.ico"); ?>" type="image/png">
 </head>

@@ -44,10 +44,25 @@
                 <div class="clear"> </div>
             </div>
             <div class="top-header-right">
-                <ul>
-                    <li><a href="login.html">Login</a><span> </span></li>
-                    <li><a href="/cliente/cadastrar">Registre-se</a></li>
-                </ul>
+                <? if ($this->session->cliente != null) { ?>
+                    <div class="msgClienteLogado">
+                        <p>Olá, <?echo $this->session->cliente->nome ?>.</p>
+                        <p class="acessoRapidoMenuCliente">
+                            <span class="itemAcessoRapidoMenu">
+                                <a href="/cliente">Painel do Cliente</a>
+                            </span>
+                            <span class="itemAcessoRapidoMenu">
+                                <a href="cliente/logout">Sair</a>
+                            </span>
+                        </p>
+                    </div>
+                <? }else{ ?>
+                        <ul>
+                            <li><a href="/cliente/login">Login</a><span> </span></li>
+                            <li><a href="/cliente/cadastrar">Registre-se</a></li>
+                        </ul><?
+                    }
+                ?>
             </div>
             <div class="clear"> </div>
         </div>
@@ -472,3 +487,4 @@
         </div>
     </div>
 </div>
+<? $this->load->view('site/layout/messages'); ?>
