@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <a class="navbar-brand" href="admin/home">
-                Supr.<span class="slogan">admin</span>
+                <img src="assets/site/images/virtualShop_logo.png">
             </a>
         </div>
         <div id="navbar-no-collapse" class="navbar-no-collapse">
@@ -17,9 +17,6 @@
                     <ul class="dropdown-menu right">
                         <li class="menu">
                             <ul>
-
-                                <?// var_dump($this->user_model->verifica_acesso_acao('usuario', 'criar')); die('---------');?>
-
                                 <li><a href="admin/usuario/editar/<?=$this->session->user->id_usuario?>"><i class="s16 icomoon-icon-user-plus"></i>Editar Usuário</a></li>
                                 <li><a href="admin/usuario/criar"><i class="s16 icomoon-icon-plus"></i>Add Usuário</a></li>
                             </ul>

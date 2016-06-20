@@ -57,14 +57,8 @@ if (!function_exists('get_list_table_from_html')) {
                 if ($val === 'Ações') {
                     $str .= '<td align="right" >';
                     $str .= '<div class="controls right" >';
-
-                if (verifica_acesso_acao($controller, 'editar')) {
-                    $str .= '<a href = "' . $controller . '/editar/' . $item->$key . '" class="tip" oldtitle = "Editar" title = "Editar" data - hasqtip = "true" aria - describedby = "qtip-13" ><span class="icon12 icomoon-icon-pencil" ></span ></a >';
-                }
-
-                if (verifica_acesso_acao($controller, 'remover')) {
-                    $str .= '<a href = "#" class="delete-modal" data-valor="' . $valor . '" data-controller="' . $controller . '" data-id="' . $item->$key . '" class="tip" oldtitle = "Excluir" title = "Excluir" data - hasqtip = "true" ><span class="icon12 icomoon-icon-remove" ></span ></a >';
-                }
+                    $str .= '<a href = "admin/' . $controller . '/editar/' . $item->$key . '" class="tip" oldtitle = "Editar" title = "Editar" data - hasqtip = "true" aria - describedby = "qtip-13" ><span class="icon12 icomoon-icon-pencil" ></span ></a >';
+                    $str .= '<a href = "#" class="delete-modal" data-valor="' . $valor . '" data-controller="admin/' . $controller . '" data-id="' . $item->$key . '" class="tip" oldtitle = "Excluir" title = "Excluir" data - hasqtip = "true" ><span class="icon12 icomoon-icon-remove" ></span ></a >';
                 $str .= '   </div >';
 
                 } else {

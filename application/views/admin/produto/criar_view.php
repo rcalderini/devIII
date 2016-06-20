@@ -17,7 +17,7 @@
                         <h4><span>Cadastro</span></h4>
                     </div>
                     <div class="panel-body pt0 pb0">
-                        <form class="form-horizontal group-border stripped" id="form-produto" action="admin/produto/salvar" method="post" role="form" >
+                        <form class="form-horizontal group-border stripped" id="form-produto" action="admin/produto/salvar" enctype="multipart/form-data" method="post" role="form" >
                             <div class="form-group">
                                 <label class="col-lg-2 col-md-3 control-label" for="required">Nome*:</label>
                                 <div class="col-lg-5 col-md-9">
@@ -35,14 +35,20 @@
                             <div class="form-group">
                                 <label class="col-lg-2 col-md-3 control-label" for="required">Qunatidade em Estoque*:</label>
                                 <div class="col-lg-3">
-                                    <input type="password" class="form-control"
-                                           value="<?=isset($produto) ? $this->user_model->encrypt->decode($produto->senha) : '';?>" id="senha" name="senha">
+                                    <input type="text" class="form-control"
+                                           value="" id="estoque" name="estoque">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 col-md-3 control-label" for="required">Quantidade em Estoque*:</label>
+                                <div class="col-lg-3">
+                                    <input type="file" name="imagem" id="imagem">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-offset-2">
                                     <button type="submit" class="btn btn-default ml15">Salvar</button>
-                                    <button type="button" onClick=top.window.location="admin/produto/cancelar" class="btn btn-danger">Cancelar</button>
+                                    <button type="button" onClick=top.window.location="admin/produto" class="btn btn-danger">Cancelar</button>
                                 </div>
                             </div><!-- End .form-group  -->
                             <div class="col-lg-10">

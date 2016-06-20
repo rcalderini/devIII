@@ -37,69 +37,12 @@
 <div class="clear"> </div>
 <!----//End-image-slider---->
 <!----start-price-rage--->
-<div class="wrap">
-    <div class="price-rage">
-        <h3>Weekly selection:</h3>
-        <div id="slider-range">
-        </div>
-    </div>
-</div>
+
 <!----//End-price-rage--->
 <!--- start-content---->
 <div class="content">
     <div class="wrap">
-        <div class="content-left">
-            <div class="content-left-top-grid">
-                <div class="content-left-price-selection">
-                    <h4>Select Price:</h4>
-                    <div class="price-selection-tree">
-                                    <span class="col_checkbox">
-                                        <input id="10" class="assets/site/css-checkbox10" type="checkbox">
-                                        <label class="normal"><i for="10" name="demo_lbl_10"  class="css-label10"> </i> 400</label>
-                                    </span>
-                                    <span class="col_checkbox">
-                                        <input id="11" class="assets/site/css-checkbox11" type="checkbox">
-                                        <label class="active1"><i for="11" name="demo_lbl_11"  class="css-label11"> </i>350</label>
-                                    </span>
-                                    <span class="col_checkbox">
-                                        <input id="12" class="assets/site/css-checkbox12" type="checkbox">
-                                        <label class="normal"><i for="12" name="demo_lbl_12"  class="css-label12"> </i> 300</label>
-                                    </span>
-                                    <span class="col_checkbox">
-                                        <input id="13" class="assets/site/css-checkbox13" type="checkbox">
-                                        <label class="normal"><i for="13" name="demo_lbl_13"  class="css-label13"> </i>250</label>
-                                    </span>
-                                    <span class="col_checkbox">
-                                        <input id="14" class="assets/site/css-checkbox14" type="checkbox">
-                                        <label class="normal"><i for="14" name="demo_lbl_14"  class="css-label14"> </i> 200</label>
-                                    </span>
-                                    <span class="col_checkbox">
-                                        <input id="15" class="assets/site/css-checkbox15" type="checkbox">
-                                        <label class="normal"><i for="15" name="demo_lbl_15"  class="css-label15"> </i>150</label>
-                                    </span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="content-left-bottom-grid">
-                <h4>Boys Football:</h4>
-                <div class="content-left-bottom-grids">
-                    <div class="content-left-bottom-grid1">
-                        <img src="assets/site/images/foot-ball.jpg" title="football" />
-                        <h5><a href="details.html">Nike Strike PL Hi-Vis</a></h5>
-                        <span> Football</span>
-                        <label>&#163; 375</label>
-                    </div>
-                    <div class="content-left-bottom-grid1">
-                        <img src="assets/site/images/jarse.jpg" title="jarse" />
-                        <h5><a href="details.html">Nike Strike PL Hi-Vis</a></h5>
-                        <span> Football</span>
-                        <label>&#163; 375</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-right">
+        <div class="content">
             <div class="product-grids">
                 <!--- start-rate---->
                 <script src="assets/site/js/jstarbox.js"></script>

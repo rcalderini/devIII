@@ -33,7 +33,7 @@
     <div class="row">
         <div class="navbar">
             <div class="container text-center">
-                <img src="assets/img/logo_p.png" width="174" height="64">
+                <img src="assets/site/images/virtualShop_logo.png" width="174" height="64">
             </div>
         </div>
         <!-- /navbar -->

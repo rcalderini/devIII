@@ -17,58 +17,39 @@
                         <h4><span>Edição</span></h4>
                     </div>
                     <div class="panel-body pt0 pb0">
-                        <form class="form-horizontal group-border stripped" id="form-criar_usuario" action="admin/usuario/atualizar" method="post" role="form" >
-                            <input type="hidden" value="<?=isset($usuario) ? $usuario->id_usuario : '';?>" name="id_usuario">
+                        <form class="form-horizontal group-border stripped" id="form-criar_usuario" action="admin/produto/atualizar" method="post" role="form" >
+                            <input type="hidden" value="<?=isset($produto) ? $produto->id_produto : '';?>" name="id_usuario">
                             <div class="form-group">
                                 <label class="col-lg-2 col-md-3 control-label" for="required">Nome*:</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="nome" autofocus="autofocus"
-                                           value="<?=isset($usuario) ? $usuario->nome : '';?>" name="nome">
+                                <div class="col-lg-5 col-md-9">
+                                    <input type="text" class="form-control" autofocus="autofocus"
+                                           value="<?=isset($produto) ? $produto->produto : '';?>" id="produto" name="produto">
                                 </div>
                             </div><!-- End .form-group  -->
-
                             <div class="form-group">
-                                <label class="col-lg-2 col-md-3 control-label" for="required">Email*:</label>
+                                <label class="col-lg-2 col-md-3 control-label" for="required">Valor*:</label>
                                 <div class="col-lg-5">
                                     <input type="text" class="form-control"
-                                           value="<?=isset($usuario) ? $usuario->email : '';?>" id="email" name="email">
+                                           value="<?=isset($produto) ? $produto->valor : '';?>" id="valor" name="valor">
                                 </div>
                             </div><!-- End .form-group  -->
-
                             <div class="form-group">
-                                <label class="col-lg-2 col-md-3 control-label" for="required">Senha*:</label>
+                                <label class="col-lg-2 col-md-3 control-label" for="required">Quantidade em Estoque*:</label>
                                 <div class="col-lg-3">
-                                    <input type="password" class="form-control"
-                                           value="<?=isset($usuario) ? $this->user_model->encrypt->decode($usuario->senha) : '';?>" id="senha" name="senha">
-                                </div>
-                            </div><!-- End .form-group  -->
-
-                            <div class="form-group">
-                                <label class="col-lg-2 col-md-3 control-label" for="required">Confirma a Senha*:</label>
-                                <div class="col-lg-3">
-                                    <input type="password" class="form-control"
-                                           value="<?=isset($usuario) ? $this->user_model->encrypt->decode($usuario->senha) : '';?>" id="confirma_senha" name="confirma_senha">
-                                </div>
-                            </div><!-- End .form-group  -->
-
-                            <div class="form-group">
-                                <label class="col-lg-2 col-md-3 control-label" for="id_tipo_usuario">Tipo Usuário</label>
-                                <div class="col-lg-3">
-                                    <select name="id_tipo_usuario" id="select1" class="nostyle form-control" placeholder="Selecione um Tipo de Usuário">
-                                        <option></option>
-                                        <?  foreach ($tipo_usuario as $tipo) { ?>
-                                            <option value=<?= $tipo->id_tipo_usuario ?>><?= $tipo->tipo ?></option>
-                                            <option <?=($tipo->id_tipo_usuario == $usuario->id_tipo_usuario)?'selected':''?> value=<?= $tipo->id_tipo_usuario ?>><?= $tipo->tipo ?></option>
-                                        <?	} ?>
-                                    </select>
+                                    <input type="text" class="form-control"
+                                           value="<?=isset($produto) ? $produto->estoque : '';?>" id="estoque" name="estoque">
                                 </div>
                             </div>
-
-
+                            <div class="form-group">
+                                <label class="col-lg-2 col-md-3 control-label" for="required">Imagem:</label>
+                                <div class="col-lg-3">
+                                    <img src="<?=base_url()?>/uploads/produtos_fotos/thumb_<?=$produto->imagem?>">
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <div class="col-lg-offset-2">
                                     <button type="submit" class="btn btn-default ml15">Salvar</button>
-                                    <button type="button" onClick=top.window.location="admin/usuario/cancelar" class="btn btn-danger">Cancelar</button>
+                                    <button type="button" onClick=top.window.location="admin/produto" class="btn btn-danger">Cancelar</button>
                                 </div>
                             </div><!-- End .form-group  -->
                             <div class="col-lg-10">
