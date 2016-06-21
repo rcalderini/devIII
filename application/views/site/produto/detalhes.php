@@ -100,7 +100,6 @@
                             <li><a class="product-rate" href="#"> <label> </label></a> <span> </span></li>
                             <li><a href="#">0 Review(s) </a></li>
                         </ul>
-<!--                        <a class="learn-more" href="#"><h3>MORE DETAILS</h3></a>-->
                         <div class="product-more-details">
                             <ul class="price-avl">
                                 <li class="price"><span>R$ <?php echo number_format($produto->valor, 2, ',', '.'); ?></span><label>R$ <?php echo number_format(($produto->valor - ($produto->valor * 0.10)), 2, ',', '.'); ?></label></li>
@@ -213,7 +212,7 @@
                             <div class="item" onclick="location.href='<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>';" >
                                 <div class="product-grid fade sproduct-grid">
                                     <div class="product-pic">
-                                        <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>"><img src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$prod->imagem?>" title="product-name" /></a>
+                                        <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>"><img src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$prod->imagem?>" title="<?=$prod->produto?>" /></a>
                                         <p>
                                             <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>"><small><?=$prod->produto?></small> </a>
                                             <span> - </span>

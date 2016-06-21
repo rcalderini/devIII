@@ -93,19 +93,18 @@
                             <div class="clear"> </div>
                         </ul>
                         <div class="block">
-                            <div class="starbox small ghosting"> </div> <span> (46)</span>
+                            <div class="starbox small ghosting"> </div> <span> (<?=(rand(0,99))?>)</span>
                         </div>
                     </div>
                     <div class="product-pic">
-                        <a href="#"><img src="assets/site/images/product2.jpg" title="product-name" /></a>
+                        <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>"><img src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$produto->imagem?>" title="<?=$produto->produto?>" /></a>
                         <p>
-                            <a href="#"><small>Nike</small> HYPERVENOM <small>Phantom</small> FG</a>
-                            <span>Men's Firm-Ground Football Boot</span>
+                            <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>"><small><?=$produto->produto?> </small> - <?=$produto->produto?></a>
                         </p>
                     </div>
                     <div class="product-info">
                         <div class="product-info-cust">
-                            <a href="details.html">Details</a>
+                            <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>">Detalhes</a>
                         </div>
                         <div class="product-info-price">
                             <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>">R$ <?php echo number_format($produto->valor, 2, ',', '.'); ?></a>
