@@ -1,11 +1,35 @@
+<!-- Owl Carousel Assets -->
+<link href="<?=base_url()?>assets/site/css/owl.carousel.css" rel="stylesheet">
+<script src="<?=base_url()?>assets/site/js/jquery-1.9.1.min.js"></script>
+<!-- Owl Carousel Assets -->
+<!-- Prettify -->
+<script src="<?=base_url()?>assets/site/js/owl.carousel.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $("#owl-demo").owlCarousel({
+            items : 3,
+            lazyLoad : true,
+            autoPlay : true,
+            navigation : true,
+            navigationText : ["",""],
+            rewindNav : false,
+            scrollPerPage : false,
+            pagination : false,
+            paginationNumbers: false,
+        });
+
+    });
+</script>
+<!-- //Owl Carousel Assets -->
 <!--- start-content---->
 <div class="content details-page">
     <!---start-product-details--->
     <div class="product-details">
         <div class="wrap">
             <ul class="product-head">
-                <li><a href="#">Home</a> <span>::</span></li>
-                <li class="active-page"><a href="#">Product Page</a></li>
+                <li><a href="<?=base_url()?>">Home</a> <span>::</span></li>
+                <li class="active-page"><a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>"><?=$produto->produto?></a></li>
                 <div class="clear"> </div>
             </ul>
             <!----details-product-slider--->
@@ -189,15 +213,15 @@
                             <div class="item" onclick="location.href='<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>';" >
                                 <div class="product-grid fade sproduct-grid">
                                     <div class="product-pic">
-                                        <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>"><img src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$prod->imagem?>" title="product-name" /></a>
+                                        <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>"><img src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$prod->imagem?>" title="product-name" /></a>
                                         <p>
-                                            <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>"><small><?=$prod->produto?></small> </a>
+                                            <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>"><small><?=$prod->produto?></small> </a>
                                             <span> - </span>
                                         </p>
                                     </div>
                                     <div class="product-info">
                                         <div class="product-info-cust">
-                                            <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>">Detalhes</a>
+                                            <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>">Detalhes</a>
                                         </div>
                                         <div class="product-info-price">
                                             <a href="<?=base_url()?>produto/detalhes/<?=$prod->id_produto?>">R$ <?php echo number_format($prod->valor, 2, ',', '.'); ?></a>
@@ -210,6 +234,7 @@
                                 </div>
                             </div>
                             <? } ?>
+
                         </div>
                         <!----//End-img-cursual---->
                     </div>

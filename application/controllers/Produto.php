@@ -18,7 +18,7 @@ class Produto extends SITE_Controller
 
     public function detalhes($id_produto) {
         $data['produto'] = $this->produto_model->findOne(array("id_produto" => $id_produto));
-        $data['outros_produtos'] = $this->produto_model->findAll(array("id_produto" => $id_produto));
+        $data['outros_produtos'] = $this->produto_model->findAll(array("id_produto !=" => $id_produto));
 
         $this->loadView("site/produto/detalhes",$data);
     }
