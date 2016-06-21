@@ -71,7 +71,20 @@
                 <!---//End-rate---->
                 <!---caption-script---->
                 <!---//caption-script---->
-                <div onclick="location.href='details.html';" class="product-grid fade">
+                <?php $i = 1;
+                foreach ($produtos as $produto) {
+
+                    if ($i % 3 == 0) {
+                        $i = 1;
+                        $class = "last-grid";
+                    } else {
+                        $class = "";
+                    }
+
+                    $i++;
+
+                ?>
+                <div onclick="location.href='<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>';" class="product-grid fade <?php echo  $class ?>">
                     <div class="product-grid-head">
                         <ul class="grid-social">
                             <li><a class="facebook" href="#"><span> </span></a></li>
@@ -95,7 +108,7 @@
                             <a href="details.html">Details</a>
                         </div>
                         <div class="product-info-price">
-                            <a href="details.html">&#163; 380</a>
+                            <a href="<?=base_url()?>produto/detalhes/<?=$produto->id_produto?>">R$ <?php echo number_format($produto->valor, 2, ',', '.'); ?></a>
                         </div>
                         <div class="clear"> </div>
                     </div>
@@ -103,166 +116,7 @@
                         <span> </span>
                     </div>
                 </div>
-                <div onclick="location.href='details.html';"  class="product-grid fade">
-                    <div class="product-grid-head">
-                        <ul class="grid-social">
-                            <li><a class="facebook" href="#"><span> </span></a></li>
-                            <li><a class="twitter" href="#"><span> </span></a></li>
-                            <li><a class="googlep" href="#"><span> </span></a></li>
-                            <div class="clear"> </div>
-                        </ul>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div> <span> (46)</span>
-                        </div>
-                    </div>
-                    <div class="product-pic">
-                        <a href="#"><img src="assets/site/images/product1.jpg" title="product-name" /></a>
-                        <p>
-                            <a href="#"><small>Nike</small> HYPERVENOM <small>Phantom</small> FG</a>
-                            <span>Men's Firm-Ground Football Boot</span>
-                        </p>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-info-cust">
-                            <a href="details.html">Details</a>
-                        </div>
-                        <div class="product-info-price">
-                            <a href="details.html">&#163; 375</a>
-                        </div>
-                        <div class="clear"> </div>
-                    </div>
-                    <div class="more-product-info">
-                        <span> </span>
-                    </div>
-                </div>
-                <div onclick="location.href='details.html';"  class="product-grid fade last-grid">
-                    <div class="product-grid-head">
-                        <ul class="grid-social">
-                            <li><a class="facebook" href="#"><span> </span></a></li>
-                            <li><a class="twitter" href="#"><span> </span></a></li>
-                            <li><a class="googlep" href="#"><span> </span></a></li>
-                            <div class="clear"> </div>
-                        </ul>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div> <span> (46)</span>
-                        </div>
-                    </div>
-                    <div class="product-pic">
-                        <a href="#"><img src="assets/site/images/product3.jpg" title="product-name" /></a>
-                        <p>
-                            <a href="#"><small>Nike</small> HYPERVENOM <small>Phantom</small> FG</a>
-                            <span>Men's Firm-Ground Football Boot</span>
-                        </p>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-info-cust">
-                            <a href="details.html">Details</a>
-                        </div>
-                        <div class="product-info-price">
-                            <a href="details.html">&#163; 350</a>
-                        </div>
-                        <div class="clear"> </div>
-                    </div>
-                    <div class="more-product-info">
-                        <span> </span>
-                    </div>
-                </div>
-                <div onclick="location.href='details.html';"  class="product-grid fade">
-                    <div class="product-grid-head">
-                        <ul class="grid-social">
-                            <li><a class="facebook" href="#"><span> </span></a></li>
-                            <li><a class="twitter" href="#"><span> </span></a></li>
-                            <li><a class="googlep" href="#"><span> </span></a></li>
-                            <div class="clear"> </div>
-                        </ul>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div> <span> (46)</span>
-                        </div>
-                    </div>
-                    <div class="product-pic">
-                        <a href="#"><img src="assets/site/images/product4.jpg" title="product-name" /></a>
-                        <p>
-                            <a href="#"><small>Nike</small> HYPERVENOM <small>Phantom</small> FG</a>
-                            <span>Men's Firm-Ground Football Boot</span>
-                        </p>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-info-cust">
-                            <a href="details.html">Details</a>
-                        </div>
-                        <div class="product-info-price">
-                            <a href="details.html">&#163; 370</a>
-                        </div>
-                        <div class="clear"> </div>
-                    </div>
-                    <div class="more-product-info">
-                        <span> </span>
-                    </div>
-                </div>
-                <div onclick="location.href='details.html';"  class="product-grid fade">
-                    <div class="product-grid-head">
-                        <ul class="grid-social">
-                            <li><a class="facebook" href="#"><span> </span></a></li>
-                            <li><a class="twitter" href="#"><span> </span></a></li>
-                            <li><a class="googlep" href="#"><span> </span></a></li>
-                            <div class="clear"> </div>
-                        </ul>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div> <span> (46)</span>
-                        </div>
-                    </div>
-                    <div class="product-pic">
-                        <a href="#"><img src="assets/site/images/product5.jpg" title="product-name" /></a>
-                        <p>
-                            <a href="#"><small>Nike</small> HYPERVENOM <small>Phantom</small> FG</a>
-                            <span>Men's Firm-Ground Football Boot</span>
-                        </p>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-info-cust">
-                            <a href="details.html">Details</a>
-                        </div>
-                        <div class="product-info-price">
-                            <a href="details.html">&#163; 355</a>
-                        </div>
-                        <div class="clear"> </div>
-                    </div>
-                    <div class="more-product-info">
-                        <span> </span>
-                    </div>
-                </div>
-                <div onclick="location.href='details.html';"  class="product-grid fade last-grid">
-                    <div class="product-grid-head">
-                        <ul class="grid-social">
-                            <li><a class="facebook" href="#"><span> </span></a></li>
-                            <li><a class="twitter" href="#"><span> </span></a></li>
-                            <li><a class="googlep" href="#"><span> </span></a></li>
-                            <div class="clear"> </div>
-                        </ul>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div> <span> (46)</span>
-                        </div>
-                    </div>
-                    <div class="product-pic">
-                        <a href="#"><img src="assets/site/images/product6.jpg" title="product-name" /></a>
-                        <p>
-                            <a href="#"><small>Nike</small> HYPERVENOM <small>Phantom</small> FG</a>
-                            <span>Men's Firm-Ground Football Boot</span>
-                        </p>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-info-cust">
-                            <a href="details.html">Details</a>
-                        </div>
-                        <div class="product-info-price">
-                            <a href="details.html">&#163; 390</a>
-                        </div>
-                        <div class="clear"> </div>
-                    </div>
-                    <div class="more-product-info">
-                        <span> </span>
-                    </div>
-                </div>
+                <?php } ?>
                 <div class="clear"> </div>
             </div>
         </div>

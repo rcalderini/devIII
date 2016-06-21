@@ -33,14 +33,14 @@
                                 </div>
                             </div><!-- End .form-group  -->
                             <div class="form-group">
-                                <label class="col-lg-2 col-md-3 control-label" for="required">Qunatidade em Estoque*:</label>
+                                <label class="col-lg-2 col-md-3 control-label" for="required">Quantidade em Estoque*:</label>
                                 <div class="col-lg-3">
                                     <input type="text" class="form-control"
                                            value="" id="estoque" name="estoque">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-lg-2 col-md-3 control-label" for="required">Quantidade em Estoque*:</label>
+                                <label class="col-lg-2 col-md-3 control-label" for="required">Imagem do produto:*</label>
                                 <div class="col-lg-3">
                                     <input type="file" name="imagem" id="imagem">
                                 </div>

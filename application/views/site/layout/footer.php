@@ -1,32 +1,5 @@
 <!---- start-bottom-grids---->
 <div class="bottom-grids">
-    <div class="bottom-top-grids">
-        <div class="wrap">
-            <div class="bottom-top-grid">
-                <h4>GET HELP</h4>
-                <ul>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="#">Shopping</a></li>
-                    <li><a href="#">NIKEiD</a></li>
-                    <li><a href="#">Nike+</a></li>
-                </ul>
-            </div>
-            <div class="bottom-top-grid">
-                <h4>ORDERS</h4>
-                <ul>
-                    <li><a href="#">Payment options</a></li>
-                    <li><a href="#">Shipping and delivery</a></li>
-                    <li><a href="#">Returns</a></li>
-                </ul>
-            </div>
-            <div class="bottom-top-grid last-bottom-top-grid">
-                <h4>REGISTER</h4>
-                <p>Create one account to manage everything you do with Nike, from your shopping preferences to your Nike+ activity.</p>
-                <a class="learn-more" href="#">Learn more</a>
-            </div>
-            <div class="clear"> </div>
-        </div>
-    </div>
     <div class="bottom-bottom-grids">
         <div class="wrap">
             <div class="bottom-bottom-grid">

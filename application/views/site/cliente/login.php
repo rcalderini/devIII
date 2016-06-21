@@ -5,12 +5,12 @@
             <div class="login-left">
                 <h3>Quero me cadastrar</h3>
                 <p>Ao criar uma conta na nossa loja, você será capaz de realizar compras através do processo de pagamento mais rápido, armazenar múltiplos endereços de envio, ver e rastrear suas encomendas em sua conta e muito mais.</p>
-                <a class="acount-btn" href="/cliente/cadastrar">Cadastrar</a>
+                <a class="acount-btn" href="<?=base_url()?>/cliente/cadastrar">Cadastrar</a>
             </div>
             <div class="login-right">
                 <h3>Já sou cadastrado</h3>
                 <p>Se você tem uma conta na nossa loja, por favor entre.</p>
-                <form action="/cliente/login" method="post" id="formLogin">
+                <form action="<?=base_url()?>/cliente/login" method="post" id="formLogin">
                     <div>
                         <span>Email<label>*</label></span>
                         <input type="text" id="email" name="email">
