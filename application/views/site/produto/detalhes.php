@@ -108,7 +108,7 @@
                             </ul>
                             <ul class="prosuct-qty">
                                 <span>Quantidade:</span>
-                                <select>
+                                <select name="qtd-produto">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -117,7 +117,7 @@
                                     <option>6</option>
                                 </select>
                             </ul>
-                            <input type="button" value="adicionar ao carrinho" />
+                            <input type="button" id="btn-add-cart" value="adicionar ao carrinho" />
                         </div>
                     </div>
                 </div>
@@ -128,6 +128,10 @@
         <!----product-rewies---->
         <div class="product-reviwes">
             <div class="wrap">
+                <div id="dialog" title="Basic dialog">
+                    <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                </div>
+                
                 <!--vertical Tabs-script-->
                 <!---responsive-tabs---->
                 <script src="<?=base_url()?>assets/site/js/easyResponsiveTabs.js" type="text/javascript"></script>
@@ -151,6 +155,24 @@
                             type: 'vertical',
                             width: 'auto',
                             fit: true
+                        });
+                        
+                        $('#btn-add-cart').click(function() {
+                            var input;
+                            var form = $('<form action="<?=base_url()?>carrinho/insere_produto" method="post"></form>').appendTo('form');
+                            
+                            // IdProduto
+                            input = $('<input type="hidden" name="id_produto" />');
+                            input.val(<?=$produto->id_produto?>);
+                            form.append(input);
+                            
+                            // Quantidade
+                            input = $('<input type="hidden" name="quantidade" />');
+                            input.val($('select[name=qtd-produto]').val());
+                            form.append(input);
+                            
+                            form.submit();
+                            
                         });
                     });
                 </script>

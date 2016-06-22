@@ -2761,3 +2761,107 @@ span.mail a:hover{
 		padding: 0 1em 1em 1em;
 	}
 }
+
+#table-cart table {
+    width: 100%;
+}
+
+#table-cart table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#table-cart table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+#table-cart table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+#table-cart table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+#table-cart table th {
+    background: #e45d5d;
+    color: #fff;
+    padding: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+#table-cart table thead {
+    border-bottom: 5px solid #b93838;
+}
+
+#table-cart table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+#table-cart table tbody tr {
+    border-bottom: 1px solid #ececec;
+}
+
+.Grand_Total {
+    float: right;
+    margin-top: 20px;
+    background: #ececec;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.btn-red {
+    background: #E45D5D;
+    color: #FFF;
+    font-size: 0.8em;
+    padding: 0.7em 1.2em;
+    border-radius: 5px;
+    border-bottom: 4px solid #B93838;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+.btn-red:hover{
+    background: #1C1C20;
+    border-bottom: 4px solid #333;
+}
+
+.btn-default {
+    background: #E4E4E4;
+    color: #000;
+    font-size: 0.8em;
+    padding: 0.7em 1.2em;
+    border-radius: 5px;
+    border-bottom: 4px solid #CCC;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.btn-default:hover{
+    background: #EEE;
+    border-bottom: 4px solid #E0E0E0;
+}
+
+.clearfix {
+    clear: both;
+}

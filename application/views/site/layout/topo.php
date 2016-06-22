@@ -23,9 +23,9 @@
                         });
                     </script>
                     <!---//cart-tonggle-script---->
-                    <li><a class="cart" href="#"><span id="clickme"> </span></a></li>
+                    <li><a class="cart" href="<?=base_url()?>carrinho"><span id="clickme"> </span></a></li>
                     <!---start-cart-bag---->
-                    <div id="cart">Your Cart is Empty <span>(0)</span></div>
+                    <!-- <div id="cart">Your Cart is Empty <span>(0)</span></div> -->
                     <!---start-cart-bag---->
                     <li><a class="info" href="#"><span> </span></a></li>
                 </ul>
