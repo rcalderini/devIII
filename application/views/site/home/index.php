@@ -6,9 +6,8 @@
                     <img src="assets/site/images/slide-1.jpg" alt="" />
                 </a>
                 <div class="slider-detils">
-                    <h3>MENS FOOT BALL <label>BOOTS</label></h3>
-                    <span>Stay true to your team all day, every day, game day.</span>
-                    <a class="slide-btn" href="details.html"> Shop Now</a>
+                    <h3>FUTEBOL MASCULINO <label>CHUTEIRA</label></h3>
+                    <span>Mantenha-se fiel à sua equipe durante todos os dia.</span>
                 </div>
             </li>
             <li>
@@ -16,9 +15,8 @@
                     <img src="assets/site/images/slide-4.jpg"  alt="" />
                 </a>
                 <div class="slider-detils">
-                    <h3>MENS FOOT BALL <label>BOOTS</label></h3>
-                    <span>Stay true to your team all day, every day, game day.</span>
-                    <a class="slide-btn" href="details.html"> Shop Now</a>
+                    <h3>FUTEBOL MASCULINO <label>CHUTEIRA</label></h3>
+                    <span>Mantenha-se fiel à sua equipe durante todos os dia.</span>
                 </div>
             </li>
             <li>
@@ -26,9 +24,8 @@
                     <img src="assets/site/images/slide-1.jpg" alt="" />
                 </a>
                 <div class="slider-detils">
-                    <h3>MENS FOOT BALL <label>BOOTS</label></h3>
-                    <span>Stay true to your team all day, every day, game day.</span>
-                    <a class="slide-btn" href="details.html"> Shop Now</a>
+                    <h3>FUTEBOL MASCULINO <label>CHUTEIRA</label></h3>
+                    <span>Mantenha-se fiel à sua equipe durante todos os dia.</span>
                 </div>
             </li>
         </ul>

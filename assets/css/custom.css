@@ -88,6 +88,18 @@
 .menuPainelCliente{
     text-decoration: none;
     color:#222222;
+    font-size: 25px;
+}
+
+.menuPainelCliente li{
+    list-style: square;
+    border-bottom: 1px solid #CCCCCC;
+    margin-left: 50px;
+    color: #E45D5D;
+}
+
+.menuPainelCliente li:hover{
+    color: #08080B;
 }
 
 .contentPainelCliente{
@@ -125,4 +137,24 @@
 .msgValidacaoCampos{
     list-style: square;
     padding-left: 10px;
+}
+
+.menuPainelCliente a{
+    color: #E45D5D;
+    padding: 0.1em 0;
+    display: block;
+    font-size: 1em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+.menuPainelCliente a:hover{
+    color: #08080B;
+}
+
+p.mensagem{
+    font-size: 20px;
+    color: #E45D5D;
 }

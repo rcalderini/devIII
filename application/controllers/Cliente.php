@@ -8,6 +8,7 @@ class Cliente extends SITE_Controller
         parent::__construct();
         $this->load->model('cliente_model');
         $this->load->model('autenticacao_model');
+        $this->load->model('Pedidos_site_model');
     }
 
     public function index()
@@ -48,6 +49,9 @@ class Cliente extends SITE_Controller
 
     public function history() {
         $data['pedidos'] = $this->cliente_model->getMyPedidos($this->getClienteId());
+        //$cliente['id_cliente'] = $this->getClienteId();
+        //$data['pedidos'] = $this->Pedidos_site_model->findAll($cliente);
+        $this->loadView('site/cliente/meus_pedidos',$data);
     }
 
     public function meus_dados() {

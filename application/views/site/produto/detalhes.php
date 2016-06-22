@@ -63,33 +63,9 @@
                     <ul id="etalage">
                         <li>
                             <a href="optionallink.html">
-                                <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image1_thumb.jpg" />
-                                <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image1_large.jpg" />
+                                <img class="etalage_thumb_image" src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$produto->imagem?>" />
+                                <img class="etalage_source_image" src="<?=base_url()?>uploads/produtos_fotos/thumb_<?=$produto->imagem?>" />
                             </a>
-                        </li>
-                        <li>
-                            <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image2_thumb.jpg" />
-                            <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image2_large.jpg" />
-                        </li>
-                        <li>
-                            <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image3_thumb.jpg" />
-                            <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image3_large.jpg" />
-                        </li>
-                        <li>
-                            <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image4_thumb.jpg" />
-                            <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image4_large.jpg" />
-                        </li>
-                        <li>
-                            <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image5_thumb.jpg" />
-                            <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image5_large.jpg" />
-                        </li>
-                        <li>
-                            <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image6_thumb.jpg" />
-                            <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image6_large.jpg" />
-                        </li>
-                        <li>
-                            <img class="etalage_thumb_image" src="<?=base_url()?>assets/site/images/product-slide/image7_thumb.jpg" />
-                            <img class="etalage_source_image" src="<?=base_url()?>assets/site/images/product-slide/image7_large.jpg" />
                         </li>
                     </ul>
                 </div>
@@ -128,10 +104,7 @@
         <!----product-rewies---->
         <div class="product-reviwes">
             <div class="wrap">
-                <div id="dialog" title="Basic dialog">
-                    <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-                </div>
-                
+
                 <!--vertical Tabs-script-->
                 <!---responsive-tabs---->
                 <script src="<?=base_url()?>assets/site/js/easyResponsiveTabs.js" type="text/javascript"></script>
@@ -156,23 +129,23 @@
                             width: 'auto',
                             fit: true
                         });
-                        
+
                         $('#btn-add-cart').click(function() {
                             var input;
                             var form = $('<form action="<?=base_url()?>carrinho/insere_produto" method="post"></form>').appendTo('form');
-                            
+
                             // IdProduto
                             input = $('<input type="hidden" name="id_produto" />');
                             input.val(<?=$produto->id_produto?>);
                             form.append(input);
-                            
+
                             // Quantidade
                             input = $('<input type="hidden" name="quantidade" />');
                             input.val($('select[name=qtd-produto]').val());
                             form.append(input);
-                            
+
                             form.submit();
-                            
+
                         });
                     });
                 </script>
@@ -186,7 +159,7 @@
                     </ul>
                     <div class="resp-tabs-container vertical-tabs">
                         <div>
-                            <h3> Details</h3>
+                            <h3> Detalhes</h3>
                             <?=$produto->detalhe?>
                         </div>
                         <div>
