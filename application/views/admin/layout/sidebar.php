@@ -33,6 +33,8 @@
                                             class="txt">Usuários</span></a></li>
                                 <li><a href="<?= base_url() ?>admin/tipo_usuario"><i class="s16  icomoon-icon-file"></i><span
                                             class="txt">Tipo Usuário</span></a></li>
+                                <li><a href="<?= base_url() ?>admin/produto"><i class="s16  icomoon-icon-file"></i><span
+                                            class="txt">Produtos</span></a></li>
                             </ul>
                         </li>
                         <li class="hasSub">
