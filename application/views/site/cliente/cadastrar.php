@@ -3,7 +3,7 @@
         <div class="wrap">
             <h1>Cadastro</h1>
             <div class="register-grids">
-                <form action="<?=base_url()?>/cliente/salvar" method="post" id="formCadastrar">
+                <form action="<?=base_url()?>cliente/salvar" method="post" id="formCadastrar">
                     <div class="register-top-grid">
                         <h3>Informações Pessoais</h3>
                         <div>

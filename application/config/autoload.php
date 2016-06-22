@@ -60,7 +60,7 @@ $autoload['packages'] = array(APPPATH . 'third_party');
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 //$autoload['libraries'] = array();
-$autoload['libraries'] = array('session', 'database', 'pagination', 'image_lib', 'encrypt', 'acl');
+$autoload['libraries'] = array('session', 'database', 'cart','pagination', 'image_lib', 'encrypt', 'acl');
 
 /*
 | -------------------------------------------------------------------

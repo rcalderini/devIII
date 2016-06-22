@@ -21,11 +21,11 @@ class Cliente extends SITE_Controller
         $this->loadView('site/cliente/cadastrar');
     }
 
-    public function salvar(){
+    public function salvar($acao = ''){
         // pegar itens post
         $data['email'] = $this->input->post('email');
         $data['ativo'] = 'S';
-        if ($this->cliente_model->findOne($data)){
+        if ($acao != 'editar' && $this->cliente_model->findOne($data)){
             $this->session->set_flashdata('erro', 'Email já cadastrado em nossa loja!');
             $data['nome'] = $this->input->post('nome');
 
@@ -33,7 +33,8 @@ class Cliente extends SITE_Controller
 
         }else{
             $data['nome'] = $this->input->post('nome').' '.$this->input->post('sobrenome');;
-            $data['senha'] = $this->cliente_model->encrypt->encode($this->input->post('senha'));
+            if ($acao != 'editar')
+                $data['senha'] = $this->cliente_model->encrypt->encode($this->input->post('senha'));
 
             $sucesso = $this->cliente_model->insertItem((object) $data);
 
@@ -43,6 +44,19 @@ class Cliente extends SITE_Controller
                 redirect('cliente');
             }
         }
+    }
+
+    public function history() {
+        $data['pedidos'] = $this->cliente_model->getMyPedidos($this->getClienteId());
+    }
+
+    public function meus_dados() {
+        $cliente['id_cliente'] = $this->getClienteId();
+        $cliente['ativo'] = 'S';
+
+        $data['cliente'] = $this->cliente_model->findOne($cliente);
+
+        $this->loadView('site/cliente/editar',$data);
     }
 
     public function logout(){

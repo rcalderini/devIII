@@ -24,7 +24,37 @@
                 </div>
                 <!-- End .sidenav-widget -->
                 <div class="mainnav">
-                    <?=get_menu_from_html($MENU)?>
+                    <ul>
+                        <li class="hasSub">
+                            <a href="#" class="notExpand"><i class="icomoon-icon-arrow-down-2 s16 hasDrop"></i><i
+                                    class="s16  icomoon-icon-file"></i><span class="txt">Cadastro</span></a>
+                            <ul class="sub">
+                                <li><a href="<?= base_url() ?>admin/usuario"><i class="s16  icomoon-icon-file"></i><span
+                                            class="txt">Usuários</span></a></li>
+                                <li><a href="<?= base_url() ?>admin/tipo_usuario"><i class="s16  icomoon-icon-file"></i><span
+                                            class="txt">Tipo Usuário</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="hasSub">
+                            <a href="#" class="notExpand"><i class="icomoon-icon-arrow-down-2 s16 hasDrop"></i><i
+                                    class="s16  icomoon-icon-file"></i><span class="txt">Clientes</span></a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="<?= base_url() ?>admin/clientes"><i
+                                            class="s16  icomoon-icon-file"></i><span class="txt">Lista de Clientes</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasSub">
+                            <a href="#" class="notExpand"><i class="icomoon-icon-arrow-down-2 s16 hasDrop"></i><i
+                                    class="s16  icomoon-icon-file"></i><span class="txt">Pedidos</span></a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="<?= base_url() ?>admin/pedidos"><i
+                                            class="s16  icomoon-icon-file"></i><span class="txt">Pedidos da Loja</span></a>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
