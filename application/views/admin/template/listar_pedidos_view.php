@@ -37,7 +37,7 @@
                             <tbody>
                             <?
                             $i = 0;
-                            foreach ($pedidos as $pedido) {
+                            foreach ($pedidos as $pedido => $val) {
                                 if ($i % 2 == 0) {
                                     $str = "odd";
                                 } else {
@@ -45,10 +45,10 @@
                                 }
                                 ?>
                             <tr class="<?=$str?>" role="row">
-                                <td><?=$pedido->cliente?></td>
-                                <td>roger_calderini@hotmail.com</td>
-                                <td><?=$pedido->total?></td>
-                                <td><?=$pedido->data_pedido?></td>
+                                <td><?=$pedido['cliente'][$val]?></td>
+                                <td><?=$pedido['itens'][$val]?></td>
+                                <td><?=$pedido['total'][$val]?></td>
+                                <td><?=$pedido['data_pedido'][$val]?></td>
                             </tr>
                             <? } ?>
                             </tbody>
