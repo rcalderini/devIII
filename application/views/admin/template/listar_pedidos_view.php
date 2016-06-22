@@ -4,7 +4,7 @@
         <!--Content wrapper-->
         <div class="heading">
             <!--  .heading-->
-            <h3><?= $table_title ?></h3>
+            <h3>Lista de Pedidos </h3>
         </div>
 
         <div id="mensagem-ajax"></div>
@@ -45,18 +45,19 @@
                                 }
                                 ?>
                             <tr class="<?=$str?>" role="row">
-                                <td><?=$pedido['cliente'][$val]?></td>
-                                <td><?=$pedido['itens'][$val]?></td>
-                                <td><?=$pedido['total'][$val]?></td>
-                                <td><?=$pedido['data_pedido'][$val]?></td>
+                                <td><?=@$pedido['cliente'][$val]?></td>
+                                <td><?=@$pedido['itens'][$val]?></td>
+                                <td><?=@$pedido['total'][$val]?></td>
+                                <td><?=@$pedido['data_pedido'][$val]?></td>
                             </tr>
                             <? } ?>
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th rowspan="1" colspan="1">Nome</th>
-                                <th rowspan="1" colspan="1">Email</th>
-                                <th rowspan="1" colspan="1">Ações</th>
+                                <th rowspan="1" colspan="1">Cliente</th>
+                                <th rowspan="1" colspan="1">Itens</th>
+                                <th rowspan="1" colspan="1">Total</th>
+                                <th rowspan="1" colspan="1">Data</th>
                             </tr>
                             </tfoot>
                         </table>

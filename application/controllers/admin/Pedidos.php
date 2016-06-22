@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Clientes extends ADMIN_Controller
+class Pedidos extends ADMIN_Controller
 {
 
     public function __construct()

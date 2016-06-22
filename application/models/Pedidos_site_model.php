@@ -1,6 +1,6 @@
 <?php
 
-class Pedido_site_model extends MY_Model
+class Pedidos_site_model extends MY_Model
 {
     function __construct()
     {
